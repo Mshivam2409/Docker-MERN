@@ -1,0 +1,38 @@
+version: "3"
+services:
+  server:
+    container_name: server
+    restart: always
+    build: ./Backend
+    volumes:
+      - ./Backend:/server
+    working_dir: /server
+    ports:
+      - "8080:8080"
+    networks:
+      - app-network
+    command: npm start
+  client:
+    container_name: client
+    restart: always
+    build: ./Frontend
+    volumes:
+      - ./Frontend:/client
+    working_dir: /client
+    ports:
+      - "3000:3000"
+    networks:
+      - app-network
+    stdin_open: true
+    command: npm run build
+    command: npm start
+
+networks:
+  app-network:
+    driver: bridge
+
+volumes:
+  data-volume:
+  node_modules:
+  web-root:
+    driver: local
