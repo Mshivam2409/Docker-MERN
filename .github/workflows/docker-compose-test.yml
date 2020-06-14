@@ -15,6 +15,6 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Test Development
-      run: docker-compose -f "docker-compose.dev.yml" up -d --build
+      run: docker-compose -f "docker-compose.dev.yml" up  --build
     - name: Test Production
       run: docker-compose -f "docker-compose.prod.yml" up -d --build
