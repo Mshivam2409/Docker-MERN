@@ -1,1 +1,2 @@
-*.yml linguist-language=Dockerfile
+docker-compose.dev.yml linguist-language=Dockerfile
+docker-compose.prod.yml linguist-language=Dockerfile
