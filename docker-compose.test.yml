@@ -1,0 +1,40 @@
+version: "3"
+services:
+  server:
+    container_name: server
+    build:
+      context: ./Backend
+      dockerfile: test.Dockerfile
+    volumes:
+      - ./Backend:/server
+    working_dir: /server
+    ports:
+      - "8080:8080"
+    networks:
+      - app-network
+    command: npm install
+  client:
+    container_name: client
+    build:
+      context: ./Frontend
+      dockerfile: test.Dockerfile
+    volumes:
+      - ./Frontend:/client
+    working_dir: /client
+    ports:
+      - "3000:3000"
+      - "35729:35729"
+    networks:
+      - app-network
+    stdin_open: true
+    command: npm install
+
+networks:
+  app-network:
+    driver: bridge
+
+volumes:
+  data-volume:
+  node_modules:
+  web-root:
+    driver: local
