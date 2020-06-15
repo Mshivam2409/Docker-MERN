@@ -3,3 +3,5 @@ docker-compose.prod.yml linguist-language=Dockerfile
 docker-compose.test.yml linguist-language=Dockerfile
 *docker-compose-test.yml linguist-language=Dockerfile
 *.dockerignore linguist-language=Dockerfile
+Frontend/src/setupTests.js linguist-detectable=false
+Frontend/src/serviceWorker.js linguist-detectable=false
