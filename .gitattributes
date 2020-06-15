@@ -2,4 +2,4 @@ docker-compose.dev.yml linguist-language=Dockerfile
 docker-compose.prod.yml linguist-language=Dockerfile
 docker-compose.test.yml linguist-language=Dockerfile
 *docker-compose-test.yml linguist-language=Dockerfile
-.dockerignore linguist-language=Dockerfile
+*.dockerignore linguist-language=Dockerfile

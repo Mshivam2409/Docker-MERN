@@ -1,2 +1,7 @@
 /Frontend/Dockerfile
 /Backtend/Dockerfile
+/Frontend/test.Dockerfile
+/Backtend/test.Dockerfile
+/Frontend/.dockerignore
+/Backtend/.dockerignore
+.dockerignore
